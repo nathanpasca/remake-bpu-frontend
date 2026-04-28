@@ -68,7 +68,7 @@ export default function VisiMisi() {
           >
             <h1 className="text-5xl md:text-8xl font-serif italic leading-[1.1] md:leading-[0.9] text-primary mb-12 tracking-tight">
               Visi & <br />
-              <span className="not-italic font-bold text-gray-200 block mt-4 uppercase tracking-tighter">Misi Kami.</span>
+              <span className="not-italic font-bold text-accent block mt-4 uppercase tracking-tighter">Misi Kami.</span>
             </h1>
           </motion.div>
         </div>
@@ -103,7 +103,7 @@ export default function VisiMisi() {
           <div className="max-w-4xl">
             <h2 className="text-4xl md:text-6xl font-serif italic font-bold text-primary mb-10 leading-[0.9] tracking-tight">
               Misi <br />
-              <span className="not-italic text-gray-200 uppercase tracking-tighter">Strategis.</span>
+              <span className="not-italic text-accent uppercase tracking-tighter">Strategis.</span>
             </h2>
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="w-16 h-[1.5px] bg-accent mt-4 shrink-0 hidden md:block" />

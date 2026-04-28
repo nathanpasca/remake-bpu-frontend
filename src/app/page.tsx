@@ -15,6 +15,7 @@ import { Clients } from '../components/Clients';
 import { Footer } from '../components/Footer';
 import { useLenis } from '../hooks/useLenis';
 import { motion, useScroll, useSpring } from 'motion/react';
+import Link from 'next/link';
 
 export default function Page() {
   useLenis();
@@ -50,20 +51,20 @@ export default function Page() {
           <Clients />
         </div>
 
-        <div id="kontak" className="px-6 md:px-12 lg:px-24 mb-40">
-          <div className="max-w-7xl mx-auto border-4 border-accent p-16 md:p-24 text-center relative overflow-hidden group">
-            <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-            <h2 className="text-4xl md:text-7xl font-serif italic font-bold text-primary mb-8 max-w-4xl mx-auto leading-[0.9] tracking-tight">
-              Ingin menjadi bagian <br />
-              <span className="not-italic text-gray-200">dari kemajuan UNJ?</span>
+        <div className="px-6 md:px-12 lg:px-24 mb-40">
+          <div className="max-w-7xl mx-auto bg-primary text-white p-16 md:p-24 rounded-[64px] text-center relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-accent opacity-10 rounded-full blur-[100px] -mr-48 -mt-48" />
+            <h2 className="text-4xl md:text-7xl font-serif italic font-bold text-white mb-8 max-w-4xl mx-auto leading-[0.9] tracking-tight relative z-10 transition-transform duration-700 group-hover:scale-105">
+              Siap untuk <br />
+              <span className="not-italic text-accent">Berkolaborasi?</span>
             </h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 relative z-10">
-              <button className="px-10 py-5 bg-primary text-white font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-primary/20 uppercase tracking-tighter">
+              <button className="px-10 py-5 bg-accent text-primary font-bold text-lg rounded-full hover:shadow-2xl hover:shadow-accent/20 active:scale-95 transition-all uppercase tracking-widest text-sm">
                 Sewa Fasilitas
               </button>
-              <button className="px-10 py-5 border-2 border-primary text-primary font-bold text-lg hover:bg-primary/5 transition-all uppercase tracking-tighter">
-                Kontak Kami
-              </button>
+              <Link href="/kontak" className="px-10 py-5 border-2 border-white/20 text-white font-bold text-lg rounded-full hover:bg-white/10 transition-all uppercase tracking-widest text-sm">
+                Hubungi Kami
+              </Link>
             </div>
           </div>
         </div>

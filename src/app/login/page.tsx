@@ -23,7 +23,7 @@ export default function Login() {
           >
             <h1 className="text-6xl font-serif italic leading-tight text-primary">
               Selamat <br />
-              <span className="not-italic text-gray-200 uppercase tracking-tighter">Datang Kembali.</span>
+              <span className="not-italic text-accent uppercase tracking-tighter">Datang Kembali.</span>
             </h1>
             <p className="text-xl text-primary/60 leading-relaxed max-w-md">
               Masuk ke akun Anda untuk mengelola aset, memantau kerjasama, dan mendapatkan informasi terbaru seputar unit bisnis UNJ.

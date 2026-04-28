@@ -26,7 +26,7 @@ export default function DasarHukum() {
           >
             <h1 className="text-5xl md:text-8xl font-serif italic leading-[1.1] md:leading-[0.9] text-primary mb-12 tracking-tight">
               Dasar <br />
-              <span className="not-italic font-bold text-gray-200 block mt-4 uppercase tracking-tighter">Hukum.</span>
+              <span className="not-italic font-bold text-accent block mt-4 uppercase tracking-tighter">Hukum.</span>
             </h1>
           </motion.div>
         </div>

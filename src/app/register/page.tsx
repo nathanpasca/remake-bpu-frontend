@@ -23,7 +23,7 @@ export default function Register() {
           >
             <h1 className="text-6xl font-serif italic leading-tight text-primary">
               Mulai <br />
-              <span className="not-italic text-gray-200 uppercase tracking-tighter">Perjalanan Anda.</span>
+              <span className="not-italic text-accent uppercase tracking-tighter">Perjalanan Anda.</span>
             </h1>
             <p className="text-xl text-primary/60 leading-relaxed max-w-md">
               Bergabunglah dengan ekosistem bisnis Universitas Negeri Jakarta dan temukan peluang kolaborasi terbaik.

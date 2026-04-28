@@ -26,7 +26,7 @@ export default function TentangKami() {
           >
             <h1 className="text-5xl md:text-8xl font-serif italic leading-[1.1] md:leading-[0.9] text-primary mb-12 tracking-tight">
               Leveraging Asset, <br />
-              <span className="not-italic font-bold text-gray-200 block mt-4 uppercase tracking-tighter">Creating Value.</span>
+              <span className="not-italic font-bold text-accent block mt-4 uppercase tracking-tighter">Creating Value.</span>
             </h1>
             
             <div className="flex flex-col md:flex-row gap-8 items-start">
