@@ -3,6 +3,7 @@
 import { motion } from 'motion/react';
 import { Section } from './ui/Layout';
 import { ArrowRight, Calendar } from 'lucide-react';
+import Link from 'next/link';
 
 const ACTIVITIES = [
   {
@@ -51,45 +52,46 @@ export const Activities = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
         {ACTIVITIES.map((item, i) => (
-          <motion.div
-            key={item.id}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className="group cursor-pointer"
-          >
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[32px] mb-8">
-              <img 
-                src={item.image} 
-                alt={item.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute top-6 left-6">
-                <span className="px-4 py-2 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-widest text-primary">
-                  {item.category}
-                </span>
+          <Link key={item.id} href={`/kegiatan/${item.id}`}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="group cursor-pointer"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[32px] mb-8">
+                <img 
+                  src={item.image} 
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute top-6 left-6">
+                  <span className="px-4 py-2 bg-white/90 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-widest text-primary">
+                    {item.category}
+                  </span>
+                </div>
               </div>
-            </div>
-            
-            <div className="flex items-center gap-2 text-accent text-xs font-bold uppercase tracking-widest mb-4">
-              <Calendar size={14} />
-              {item.date}
-            </div>
-            
-            <h3 className="text-2xl font-bold text-primary mb-4 leading-tight group-hover:text-accent transition-colors">
-              {item.title}
-            </h3>
-            
-            <p className="text-primary/60 text-sm leading-relaxed mb-6">
-              {item.desc}
-            </p>
-            
-            <div className="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest group-hover:gap-4 transition-all uppercase">
-              Baca Selengkapnya
-              <ArrowRight size={16} className="text-accent" />
-            </div>
-          </motion.div>
+              
+              <div className="flex items-center gap-2 text-accent text-xs font-bold uppercase tracking-widest mb-4">
+                <Calendar size={14} />
+                {item.date}
+              </div>
+              
+              <h3 className="text-2xl font-bold text-primary mb-4 leading-tight group-hover:text-accent transition-colors">
+                {item.title}
+              </h3>
+              
+              <p className="text-primary/60 text-sm leading-relaxed mb-6">
+                {item.desc}
+              </p>
+              
+              <div className="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest group-hover:gap-4 transition-all uppercase">
+                Baca Selengkapnya
+                <ArrowRight size={16} className="text-accent" />
+              </div>
+            </motion.div>
+          </Link>
         ))}
       </div>
 
