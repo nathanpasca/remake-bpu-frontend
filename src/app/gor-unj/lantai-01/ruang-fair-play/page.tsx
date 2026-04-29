@@ -1,13 +1,18 @@
 "use client";
 
-import { motion } from 'motion/react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Section } from '../../../../components/ui/Layout';
 import { Navbar } from '../../../../components/Navbar';
 import { Footer } from '../../../../components/Footer';
 import { ArrowLeft, Users, Clock, Calendar, Info } from 'lucide-react';
 import Link from 'next/link';
+import { BookingModal } from '../../../../components/BookingModal';
+import { ScheduleViewer } from '../../../../components/ScheduleViewer';
 
 export default function RuangFairPlayPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-white selection:bg-accent selection:text-white">
       <Navbar />
@@ -96,6 +101,15 @@ export default function RuangFairPlayPage() {
                  </div>
               </div>
             </div>
+
+            {/* Availability Schedule Section */}
+            <div className="mb-24">
+              <div className="mb-12">
+                <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-accent mb-4">Live Availability</h2>
+                <h3 className="text-4xl font-serif italic text-primary">Jadwal Ketersediaan</h3>
+              </div>
+              <ScheduleViewer />
+            </div>
           </motion.div>
 
           {/* Pricing Table */}
@@ -158,15 +172,24 @@ export default function RuangFairPlayPage() {
               </div>
               <div className="space-y-4">
                 <p className="text-[10px] font-black uppercase tracking-widest opacity-40">Klik Tombol Dibawah untuk Melihat Jadwal dan Pemesanan</p>
-                <Link href="/kontak" className="block w-full bg-primary text-white py-5 rounded-full text-center font-bold uppercase tracking-widest text-xs hover:shadow-2xl transition-all">
+                <button 
+                  onClick={() => setIsModalOpen(true)}
+                  className="block w-full bg-primary text-white py-5 rounded-full text-center font-bold uppercase tracking-widest text-xs hover:shadow-2xl transition-all"
+                >
                   Lihat Jadwal & Pesan
-                </Link>
+                </button>
               </div>
             </div>
           </motion.div>
 
         </div>
       </Section>
+
+      <BookingModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        facilityName="Ruang Fair Play" 
+      />
 
       <Footer />
     </main>
